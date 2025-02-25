@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Trang quản lý')</title>
+    <title>@yield('title', 'Trang quản lý sinh viên')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/admin') }}">Trang Quản Lý</a>
+            <span class="navbar-brand">Trang Quản Lý Sinh Viên</span>
         </div>
     </nav>
 

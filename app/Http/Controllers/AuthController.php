@@ -4,33 +4,40 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-
+use App\Models\User;
 
 class AuthController extends Controller
 {
+    // Hiển thị form đăng nhập
     public function showLoginForm()
     {
         return view('auth.login');
     }
 
+    // Xử lý đăng nhập
     public function login(Request $request)
-{
-    $user = User::where('username', $request->username)->first();
+    {
+        // Validate dữ liệu đầu vào
+        $credentials = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
 
-    if ($user && Hash::check($request->password, $user->password)) {
-        auth()->login($user);
-        return redirect('/sinhvien');
+        // Thử xác thực bằng Auth::attempt()
+        if (Auth::attempt($credentials)) {
+            // Nếu xác thực thành công, chuyển hướng tới trang /sinhvien
+            return redirect()->route('sinhvien.index');
+        }
+
+        // Nếu không thành công, trả về thông báo lỗi
+        return back()->withErrors(['username' => 'Thông tin đăng nhập không đúng']);
     }
 
-    return back()->withErrors(['login' => 'Sai tài khoản hoặc mật khẩu']);
-}
-    
-    
-    public function logout()
+    // Đăng xuất
+    public function logout(Request $request)
     {
-        session()->forget('is_admin');
-        return redirect('/login');
+        Auth::logout();
+        return redirect()->route('login');
     }
 }

@@ -13,7 +13,7 @@ class AdminMiddleware
         if (Auth::check() && Auth::user()->username === 'admin') {
             return $next($request);
         }
-
-        return redirect('/login')->with('error', 'Bạn không có quyền truy cập!');
+        
+        return redirect('/')->withErrors(['error' => 'Bạn không có quyền truy cập.']);
     }
 }

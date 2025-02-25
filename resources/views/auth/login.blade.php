@@ -37,9 +37,13 @@
                 class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
                 Đăng nhập
             </button>
+
+            <p class="mt-4 text-center text-gray-600">
+                Chưa có tài khoản? 
+                <a class="text-blue-500 hover:underline">Đăng ký ngay</a>
+            </p>
         </form>
 
-        <p class="text-center text-gray-500 text-sm mt-4">© 2024. Tất cả quyền được bảo lưu.</p>
     </div>
 
 </body>
