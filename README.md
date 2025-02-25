@@ -50,6 +50,11 @@ Cho phép người dùng xóa thông tin của sinh viên khỏi hệ thống.
 
 Hệ thống hiển thị hộp thoại xác nhận trước khi thực hiện xóa.
 
+### Sơ đồ chức năng
+
+![image](https://github.com/user-attachments/assets/ed6c6d03-27d5-4769-a156-9f9bcaaed0d8)
+
+
 ### Công nghệ sử dụng
 Backend: Laravel (PHP framework)
 
