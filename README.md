@@ -1,66 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Mô tả dự án
+Dự án Quản lý Sinh viên là một ứng dụng web được phát triển bằng framework Laravel, giúp quản lý thông tin sinh viên một cách hiệu quả. Ứng dụng cung cấp các chức năng cơ bản như thêm, sửa, xóa, và xem danh sách sinh viên, đồng thời hỗ trợ tìm kiếm và phân trang dữ liệu.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Các chức năng chính
+1. Xem danh sách sinh viên
+Hiển thị danh sách sinh viên với các thông tin cơ bản như:
 
-## About Laravel
+Mã sinh viên
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Họ tên
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ngày sinh
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Lớp
 
-## Learning Laravel
+Điểm trung bình
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Hỗ trợ phân trang và sắp xếp dữ liệu theo các tiêu chí khác nhau.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Thêm sinh viên
+Cho phép người dùng thêm thông tin sinh viên mới vào hệ thống.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Các thông tin cần nhập bao gồm:
 
-## Laravel Sponsors
+Mã sinh viên
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Họ tên
 
-### Premium Partners
+Ngày sinh
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Giới tính
 
-## Contributing
+Địa chỉ 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Số điện thoại
 
-## Code of Conduct
+Hệ thống kiểm tra tính hợp lệ của dữ liệu trước khi lưu.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Sửa thông tin sinh viên
+Cho phép người dùng chỉnh sửa thông tin của sinh viên đã có trong hệ thống.
 
-## Security Vulnerabilities
+Người dùng có thể cập nhật các thông tin như mã sinh viên, họ tên, ngày sinh, giới tính, địa chỉ, số điện thoại.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Hệ thống kiểm tra tính hợp lệ của dữ liệu trước khi lưu.
 
-## License
+4. Xóa sinh viên
+Cho phép người dùng xóa thông tin của sinh viên khỏi hệ thống.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Hệ thống hiển thị hộp thoại xác nhận trước khi thực hiện xóa.
+
+Công nghệ sử dụng
+Backend: Laravel (PHP framework)
+
+Frontend: Tailwind CSS
+
+Cơ sở dữ liệu: MySQL
+
+Công cụ hỗ trợ:
+
+GitHub Codespaces: Môi trường phát triển tích hợp trên đám mây.
+
+Git: Quản lý phiên bản mã nguồn.
+
+Cài đặt và chạy dự án
+Yêu cầu hệ thống
+PHP >= 8.0
+
+Composer
+
+MySQL
+
+Node.js và npm (để biên dịch Tailwind CSS)
+
+2. Cài đặt
+- Cài đặt dependencies
+- composer install
+- npm install
+- Cấu hình môi trường
+- cp .env.example .env
+- Cập nhật thông tin kết nối database trong file .env:
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=library_management
+- DB_USERNAME=root
+- DB_PASSWORD=your_password
+
+- Tạo key và chạy migrations
+- php artisan key:generate
+- php artisan migrate --seed
+- Chạy ứng dụng
+- php artisan serve
+
+### Tài khoản mẫu 
+### Admin
+- Email: admin
+- Password: admin
