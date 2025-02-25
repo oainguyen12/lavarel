@@ -4,6 +4,13 @@
 
 @section('content')
     <div class="container mt-5">
+        <div class="d-flex justify-content-end mb-3">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger">Đăng xuất</button>
+            </form>
+        </div>
+
         <h2 class="text-center">Danh Sách Sinh Viên</h2>
 
         <a href="{{ route('sinhvien.create') }}" class="btn btn-success mb-3">Thêm Sinh Viên</a>
@@ -11,7 +18,6 @@
         <table class="table table-bordered">
             <thead class="table-dark">
                 <tr>
-                    <th>ID</th>
                     <th>Mã SV</th>
                     <th>Họ Tên</th>
                     <th>Ngày Sinh</th>
@@ -24,7 +30,6 @@
             <tbody>
                 @foreach ($sinhvien as $sv)
                     <tr>
-                        <td>{{ $sv->id }}</td>
                         <td>{{ $sv->MaSV }}</td>
                         <td>{{ $sv->HoTen }}</td>
                         <td>{{ $sv->NgaySinh }}</td>
